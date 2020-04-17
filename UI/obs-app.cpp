@@ -74,7 +74,7 @@ bool opt_start_streaming = false;
 bool opt_start_recording = false;
 bool opt_studio_mode = false;
 bool opt_start_replaybuffer = false;
-bool opt_minimize_tray = false;
+bool opt_minimize_tray = true;
 bool opt_allow_opengl = false;
 bool opt_always_on_top = false;
 string opt_starting_collection;

@@ -1790,7 +1790,7 @@ void OBSBasic::OBSInit()
 		config_save_safe(App()->GlobalConfig(), "tmp", nullptr);
 	}
 
-	if (!first_run && !has_last_version && !Active()) {
+	/*if (!first_run && !has_last_version && !Active()) {
 		QString msg;
 		msg = QTStr("Basic.FirstStartup.RunWizard");
 
@@ -1806,7 +1806,7 @@ void OBSBasic::OBSInit()
 			OBSMessageBox::information(
 				this, QTStr("Basic.AutoConfig"), msg);
 		}
-	}
+	}*/
 
 	ToggleMixerLayout(config_get_bool(App()->GlobalConfig(), "BasicWindow",
 					  "VerticalVolControl"));
@@ -7246,6 +7246,8 @@ void OBSBasic::SystemTray(bool firstStarted)
 		showHide->setText(QTStr("Basic.SystemTray.Hide"));
 	else
 		showHide->setText(QTStr("Basic.SystemTray.Show"));
+	
+	trayIcon->hide();
 }
 
 bool OBSBasic::sysTrayMinimizeToTray()
